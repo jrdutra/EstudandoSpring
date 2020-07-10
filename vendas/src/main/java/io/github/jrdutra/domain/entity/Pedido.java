@@ -1,14 +1,40 @@
 package io.github.jrdutra.domain.entity;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
+import java.util.Set;
 
+@Entity
+@Table(name = "pedido")
 public class Pedido {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Integer id;
+
+    @ManyToOne()
+    @JoinColumn(name = "cliente_id")
     private Cliente cliente;
+
+    @Column(name = "data_pedido")
     private LocalDate dataPedido;
+
+    @Column(name = "total", length = 20, precision = 2)
     private BigDecimal total;
+
+    @OneToMany(mappedBy = "pedido")
+    private List<ItemPedido> itensPedido;
+
+    public List<ItemPedido> getItensPedido() {
+        return itensPedido;
+    }
+
+    public void setItensPedido(List<ItemPedido> itensPedido) {
+        this.itensPedido = itensPedido;
+    }
 
     public Integer getId() {
         return id;
