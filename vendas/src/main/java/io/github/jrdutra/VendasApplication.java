@@ -1,27 +1,45 @@
 package io.github.jrdutra;
 
-import ch.qos.logback.core.net.server.Client;
 import io.github.jrdutra.domain.entity.Cliente;
-import io.github.jrdutra.domain.repositorio.Clientes;
+import io.github.jrdutra.domain.entity.Pedido;
+import io.github.jrdutra.domain.repository.ClienteDao;
+import io.github.jrdutra.domain.repository.PedidoDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.List;
 
 @SpringBootApplication
 public class VendasApplication {
 
     @Bean
-    public CommandLineRunner init(@Autowired Clientes clientes){
+    public CommandLineRunner init(
+            @Autowired ClienteDao daoCliente,
+            @Autowired PedidoDao daoPedido
+            ){
         return args -> {
-            clientes.save(new Cliente("Joao"));
-            clientes.save(new Cliente("Joao Ricardo"));
+            System.out.println("Salvando cliente");
+            Cliente fulano = new Cliente("Fulano");
+            daoCliente.save(fulano);
 
-            List<Cliente> listaCliente = clientes.encontrarPorNome("Joao");
-            listaCliente.forEach(System.out::println);
+            Pedido p = new Pedido();
+            p.setCliente(fulano);
+            p.setDataPedido(LocalDate.now());
+            p.setTotal(BigDecimal.valueOf(10));
+
+            daoPedido.save(p);
+
+//            Cliente cliente = daoCliente.findClienteFetchPedidos(fulano.getId());
+//            System.out.println(cliente);
+//            System.out.println(cliente.getPedidos());
+
+            List<Pedido> listaPedidos = daoPedido.findByCliente(fulano);
+            listaPedidos.forEach(System.out::println);
 
         };
     }
