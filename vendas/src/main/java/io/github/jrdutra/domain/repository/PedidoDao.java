@@ -10,6 +10,8 @@ import java.util.List;
 @Repository
 public interface PedidoDao extends JpaRepository<Pedido, Integer> {
 
+
+
     List<Pedido> findByCliente(Cliente cliente);
 
 }
