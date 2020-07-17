@@ -4,6 +4,7 @@ import io.github.jrdutra.domain.entity.Cliente;
 import io.github.jrdutra.domain.entity.ItemPedido;
 import io.github.jrdutra.domain.entity.Pedido;
 import io.github.jrdutra.domain.entity.Produto;
+import io.github.jrdutra.domain.enums.StatusPedido;
 import io.github.jrdutra.domain.repository.ClienteDao;
 import io.github.jrdutra.domain.repository.ItensPedidoDao;
 import io.github.jrdutra.domain.repository.PedidoDao;
@@ -34,16 +35,15 @@ public class PedidoServiceImpl implements PedidoService {
     @Transactional
     public Pedido salvar(PedidoDTO dto) {
 
-        Pedido pedido = new Pedido();
-        pedido.setTotal(dto.getTotal());
-        pedido.setDataPedido(LocalDate.now());
-
         Integer idCliente = dto.getCliente();
-
         Cliente cliente = daoCliente.findById(idCliente)
                 .orElseThrow(() -> new RegraNegocioException("Código de cliente não encontrado"));
 
+        Pedido pedido = new Pedido();
+        pedido.setTotal(dto.getTotal());
+        pedido.setDataPedido(LocalDate.now());
         pedido.setCliente(cliente);
+        pedido.setStatus(StatusPedido.REALIZADO);
 
         List<ItemPedido> itemPedidos = converterItens(pedido, dto.getItensPedido());
         daoPedido.save(pedido);
@@ -71,6 +71,10 @@ public class PedidoServiceImpl implements PedidoService {
                             return itemPedido;
                         }
                 ).collect(Collectors.toList());
+    }
+
+    public Optional<Pedido> obterPedidoCompleto(Integer id){
+        return daoPedido.findByIdFetchItensPedido(id);
     }
 
 }
