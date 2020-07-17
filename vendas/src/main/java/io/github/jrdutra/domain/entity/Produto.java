@@ -5,6 +5,8 @@ import lombok.NoArgsConstructor;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.util.Set;
 
@@ -21,9 +23,11 @@ public class Produto {
     private Integer id;
 
     @Column(name = "descricao")
+    @NotEmpty(message = "Descrição obrigatória")
     private String descricao;
 
     @Column(name = "preco_unitario")
+    @NotNull(message = "Campo preço é obrigatório")
     private BigDecimal preco;
 
     @OneToMany(mappedBy = "produto")

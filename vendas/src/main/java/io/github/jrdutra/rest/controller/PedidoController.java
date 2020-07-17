@@ -2,6 +2,8 @@ package io.github.jrdutra.rest.controller;
 
 import io.github.jrdutra.domain.entity.ItemPedido;
 import io.github.jrdutra.domain.entity.Pedido;
+import io.github.jrdutra.domain.enums.StatusPedido;
+import io.github.jrdutra.rest.dto.AtualizacaoStatusPedidoDTO;
 import io.github.jrdutra.rest.dto.InformacaoItemPedidoDTO;
 import io.github.jrdutra.rest.dto.InformacoesPedidoDTO;
 import io.github.jrdutra.rest.dto.PedidoDTO;
@@ -11,6 +13,7 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import javax.validation.Valid;
 import java.time.format.DateTimeFormatter;
 import java.util.Collections;
 import java.util.List;
@@ -20,25 +23,33 @@ import java.util.stream.Collectors;
 @RequestMapping("/api/pedidos")
 public class PedidoController {
 
-    private PedidoService service;
+    private PedidoService servicePedido;
 
     public PedidoController(PedidoService service){
-        this.service = service;
+        this.servicePedido = service;
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Integer save(@RequestBody PedidoDTO dto){
-        Pedido pedido = service.salvar(dto);
+    public Integer save(@RequestBody @Valid PedidoDTO dto){
+        Pedido pedido = servicePedido.salvar(dto);
         return pedido.getId();
     }
 
     @GetMapping("{id}")
     public InformacoesPedidoDTO getById(@PathVariable Integer id){
-        return service
+        return servicePedido
                 .obterPedidoCompleto(id)
                 .map(p->converter(p))
                 .orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND, "Pedido não encontrado"));
+    }
+
+    @PatchMapping("{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void updateStatus(@PathVariable Integer id,
+                             @RequestBody @Valid AtualizacaoStatusPedidoDTO dto){
+        String novoStatus = dto.getNovoStatus();
+        servicePedido.atualizaStatus(id, StatusPedido.valueOf(novoStatus));
     }
 
     private InformacoesPedidoDTO converter(Pedido pedido){

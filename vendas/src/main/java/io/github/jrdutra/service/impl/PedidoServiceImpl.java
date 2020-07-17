@@ -9,6 +9,7 @@ import io.github.jrdutra.domain.repository.ClienteDao;
 import io.github.jrdutra.domain.repository.ItensPedidoDao;
 import io.github.jrdutra.domain.repository.PedidoDao;
 import io.github.jrdutra.domain.repository.ProdutoDao;
+import io.github.jrdutra.exeption.PedidoNaoEncontradoExceptio;
 import io.github.jrdutra.exeption.RegraNegocioException;
 import io.github.jrdutra.rest.dto.ItemPedidoDTO;
 import io.github.jrdutra.rest.dto.PedidoDTO;
@@ -75,6 +76,17 @@ public class PedidoServiceImpl implements PedidoService {
 
     public Optional<Pedido> obterPedidoCompleto(Integer id){
         return daoPedido.findByIdFetchItensPedido(id);
+    }
+
+    @Override
+    @Transactional
+    public void atualizaStatus(Integer id, StatusPedido statusPedido) {
+        daoPedido
+                .findById(id)
+                .map(p->{
+                    p.setStatus(statusPedido);
+                    return daoPedido.save(p);
+                }).orElseThrow(()->new PedidoNaoEncontradoExceptio());
     }
 
 }
