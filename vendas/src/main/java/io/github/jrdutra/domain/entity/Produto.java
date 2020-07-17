@@ -1,9 +1,16 @@
 package io.github.jrdutra.domain.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Data;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Set;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 @Entity
 @Table(name = "produto")
 public class Produto {
@@ -22,35 +29,4 @@ public class Produto {
     @OneToMany(mappedBy = "produto")
     private Set<ItemPedido> itensPedido;
 
-    public Set<ItemPedido> getItensPedido() {
-        return itensPedido;
-    }
-
-    public void setItensPedido(Set<ItemPedido> itensPedido) {
-        this.itensPedido = itensPedido;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public BigDecimal getPreco() {
-        return preco;
-    }
-
-    public void setPreco(BigDecimal preco) {
-        this.preco = preco;
-    }
 }
