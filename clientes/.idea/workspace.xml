@@ -23,16 +23,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b56ffd2c-5dc2-44d1-9fec-66d950a75fee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/ClientesApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/model/entity/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/model/entity/Servico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/model/repository/ClienteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/model/repository/ServicoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/rest/ClienteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientes.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -53,7 +66,22 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration name="ClientesApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jrdutra.clientes.ClientesApplication" />
+      <module name="clientes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jrdutra.clientes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -79,9 +107,33 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1553" y="19" key="SettingsEditor" timestamp="1596641185617">
+    <state x="1507" y="42" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596646383443">
       <screen x="1366" y="0" width="1366" height="768" />
     </state>
-    <state x="1553" y="19" key="SettingsEditor/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1596641185617" />
+    <state x="1507" y="42" key="#com.intellij.execution.impl.EditConfigurationsDialog/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1596646383443" />
+    <state width="1320" height="186" key="GridCell.Tab.0.bottom" timestamp="1596651526030">
+      <screen x="1366" y="0" width="1366" height="768" />
+    </state>
+    <state width="1320" height="186" key="GridCell.Tab.0.bottom/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1596651526030" />
+    <state width="1320" height="186" key="GridCell.Tab.0.center" timestamp="1596651526030">
+      <screen x="1366" y="0" width="1366" height="768" />
+    </state>
+    <state width="1320" height="186" key="GridCell.Tab.0.center/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1596651526030" />
+    <state width="1320" height="186" key="GridCell.Tab.0.left" timestamp="1596651526030">
+      <screen x="1366" y="0" width="1366" height="768" />
+    </state>
+    <state width="1320" height="186" key="GridCell.Tab.0.left/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1596651526030" />
+    <state width="1320" height="186" key="GridCell.Tab.0.right" timestamp="1596651526030">
+      <screen x="1366" y="0" width="1366" height="768" />
+    </state>
+    <state width="1320" height="186" key="GridCell.Tab.0.right/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1596651526030" />
+    <state x="1553" y="19" key="SettingsEditor" timestamp="1596646751873">
+      <screen x="1366" y="0" width="1366" height="768" />
+    </state>
+    <state x="1553" y="19" key="SettingsEditor/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1596646751873" />
+    <state x="1712" y="170" key="run.anything.popup" timestamp="1596651086831">
+      <screen x="1366" y="0" width="1366" height="768" />
+    </state>
+    <state x="1712" y="170" key="run.anything.popup/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1596651086831" />
   </component>
 </project>
