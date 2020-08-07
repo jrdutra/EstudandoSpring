@@ -24,8 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b56ffd2c-5dc2-44d1-9fec-66d950a75fee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/clientes.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/clientes.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/clientes/clientes.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/clientes/clientes.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/rest/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/rest/ClienteController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
