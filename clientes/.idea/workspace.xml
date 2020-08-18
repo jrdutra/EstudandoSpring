@@ -23,27 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b56ffd2c-5dc2-44d1-9fec-66d950a75fee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/config/AuthorizationServerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/config/ResourceServerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/model/entity/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/model/repository/UsuarioRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/rest/UsuarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/service/UsuarioService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/config/AuthorizationServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/config/AuthorizationServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/model/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/model/repository/UsuarioRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/clientes/clientes-form/clientes-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/clientes/clientes-form/clientes-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/clientes/clientes-lista/clientes-lista.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/clientes/clientes-lista/clientes-lista.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/clientes/clientes-lista/clientes-lista.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/clientes/clientes-lista/clientes-lista.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/clientes/clientes-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/clientes/clientes-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/layout/layout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/layout/layout.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/servico-prestado/servico-prestado-form/servico-prestado-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/servico-prestado/servico-prestado-form/servico-prestado-form.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/servico-prestado/servico-prestado-lista/servico-prestado-lista.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/servico-prestado/servico-prestado-lista/servico-prestado-lista.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/servico-prestado/servico-prestado-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/servico-prestado/servico-prestado-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/template/sidebar/sidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/template/sidebar/sidebar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jrdutra/clientes/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jrdutra/clientes/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jrdutra/clientes/model/repository/UsuarioRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jrdutra/clientes/model/repository/UsuarioRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,22 +115,22 @@
       <screen x="1366" y="0" width="1366" height="768" />
     </state>
     <state x="1507" y="42" key="#com.intellij.execution.impl.EditConfigurationsDialog/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1596646383443" />
-    <state width="1310" height="295" key="GridCell.Tab.0.bottom" timestamp="1597781046379">
+    <state width="1310" height="295" key="GridCell.Tab.0.bottom" timestamp="1597785319648">
       <screen x="1366" y="0" width="1366" height="768" />
     </state>
-    <state width="1310" height="295" key="GridCell.Tab.0.bottom/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1597781046379" />
-    <state width="1310" height="295" key="GridCell.Tab.0.center" timestamp="1597781046379">
+    <state width="1310" height="295" key="GridCell.Tab.0.bottom/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1597785319648" />
+    <state width="1310" height="295" key="GridCell.Tab.0.center" timestamp="1597785319648">
       <screen x="1366" y="0" width="1366" height="768" />
     </state>
-    <state width="1310" height="295" key="GridCell.Tab.0.center/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1597781046379" />
-    <state width="1310" height="295" key="GridCell.Tab.0.left" timestamp="1597781046378">
+    <state width="1310" height="295" key="GridCell.Tab.0.center/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1597785319648" />
+    <state width="1310" height="295" key="GridCell.Tab.0.left" timestamp="1597785319648">
       <screen x="1366" y="0" width="1366" height="768" />
     </state>
-    <state width="1310" height="295" key="GridCell.Tab.0.left/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1597781046378" />
-    <state width="1310" height="295" key="GridCell.Tab.0.right" timestamp="1597781046379">
+    <state width="1310" height="295" key="GridCell.Tab.0.left/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1597785319648" />
+    <state width="1310" height="295" key="GridCell.Tab.0.right" timestamp="1597785319648">
       <screen x="1366" y="0" width="1366" height="768" />
     </state>
-    <state width="1310" height="295" key="GridCell.Tab.0.right/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1597781046379" />
+    <state width="1310" height="295" key="GridCell.Tab.0.right/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1597785319648" />
     <state x="1553" y="19" key="SettingsEditor" timestamp="1596646751873">
       <screen x="1366" y="0" width="1366" height="768" />
     </state>
