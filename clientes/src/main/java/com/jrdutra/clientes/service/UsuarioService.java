@@ -1,4 +1,5 @@
 package com.jrdutra.clientes.service;
+import com.jrdutra.clientes.exception.UsuarioCadastradoException;
 import com.jrdutra.clientes.model.entity.Usuario;
 import com.jrdutra.clientes.model.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,14 @@ public class UsuarioService implements UserDetailsService {
 
     @Autowired
     private UsuarioRepository repository;
+
+    public Usuario salvar(Usuario usuario){
+        boolean exists = repository.existsByUsername(usuario.getUsername());
+        if(exists){
+            throw new UsuarioCadastradoException(usuario.getUsername());
+        }
+        return repository.save(usuario);
+    }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
