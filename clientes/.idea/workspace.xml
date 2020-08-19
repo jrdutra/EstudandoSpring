@@ -22,27 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b56ffd2c-5dc2-44d1-9fec-66d950a75fee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/exception/UsuarioCadastradoException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/model/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/model/entity/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/model/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/model/repository/UsuarioRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/rest/ApplicationControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/rest/ApplicationControllerAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/rest/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/rest/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jrdutra/clientes/service/UsuarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jrdutra/clientes/model/entity/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jrdutra/clientes/model/entity/Usuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jrdutra/clientes/model/repository/UsuarioRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jrdutra/clientes/model/repository/UsuarioRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jrdutra/clientes/rest/ApplicationControllerAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jrdutra/clientes/rest/ApplicationControllerAdvice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jrdutra/clientes/rest/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jrdutra/clientes/rest/UsuarioController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jrdutra/clientes/service/UsuarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jrdutra/clientes/service/UsuarioService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/clientes.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/clientes.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontAngular/clientes-app/src/app/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontAngular/clientes-app/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontAngular/clientes-app/src/environments/environment.ts" afterDir="false" />
-    </list>
+    <list default="true" id="b56ffd2c-5dc2-44d1-9fec-66d950a75fee" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
