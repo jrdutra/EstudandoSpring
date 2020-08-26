@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name: com.mongodb.Mongo
+  data:
+    mongodb:
+      host: localhost
+      database: tarefas_db
+      port: 27017
+    loggin:
+      level:
+        ROOT: DEBUG
+      debug: true
